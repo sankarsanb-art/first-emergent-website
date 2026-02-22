@@ -8,9 +8,9 @@ interface LogoProps {
 
 export const Logo: React.FC<LogoProps> = ({ size = 'medium', style }) => {
   const dimensions = {
-    small: { width: 40, height: 40 },
-    medium: { width: 60, height: 60 },
-    large: { width: 120, height: 120 },
+    small: { width: 50, height: 50 },
+    medium: { width: 80, height: 80 },
+    large: { width: 140, height: 140 },
   };
 
   // Logo stored locally in assets
@@ -31,6 +31,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   logo: {
-    borderRadius: 50,
+    // No border radius to show full logo
   },
 });
