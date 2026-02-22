@@ -12,12 +12,20 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
-import MapView, { Marker } from 'react-native-maps';
 import { Button } from '../components/Button';
 import { SectionHeader } from '../components/SectionHeader';
 import { Colors } from '../constants/Colors';
 import { Typography } from '../constants/Typography';
 import axios from 'axios';
+
+// Conditionally import MapView only for native platforms
+let MapView: any = null;
+let Marker: any = null;
+if (Platform.OS !== 'web') {
+  const maps = require('react-native-maps');
+  MapView = maps.default;
+  Marker = maps.Marker;
+}
 
 const EXPO_PUBLIC_BACKEND_URL = process.env.EXPO_PUBLIC_BACKEND_URL;
 
@@ -262,18 +270,30 @@ export default function ContactPage() {
           {/* Map Section */}
           <View style={styles.mapSection}>
             <SectionHeader title="Our Location" align="center" />
-            <View style={styles.mapContainer}>
-              <MapView
-                style={styles.map}
-                initialRegion={{
-                  ...bengaluruCoordinates,
-                  latitudeDelta: 0.1,
-                  longitudeDelta: 0.1,
-                }}
-              >
-                <Marker coordinate={bengaluruCoordinates} title="Bengaluru, India" />
-              </MapView>
-            </View>
+            {Platform.OS === 'web' ? (
+              <View style={styles.mapContainer}>
+                <View style={[styles.map, styles.webMapPlaceholder]}>
+                  <Ionicons name="location" size={48} color={Colors.accent} />
+                  <Text style={styles.webMapText}>Bengaluru, India</Text>
+                  <Text style={styles.webMapSubtext}>
+                    Open in Maps App for directions
+                  </Text>
+                </View>
+              </View>
+            ) : (
+              <View style={styles.mapContainer}>
+                <MapView
+                  style={styles.map}
+                  initialRegion={{
+                    ...bengaluruCoordinates,
+                    latitudeDelta: 0.1,
+                    longitudeDelta: 0.1,
+                  }}
+                >
+                  <Marker coordinate={bengaluruCoordinates} title="Bengaluru, India" />
+                </MapView>
+              </View>
+            )}
             <Text style={styles.mapNote}>Available for GCC Onsite Advisory Engagements</Text>
           </View>
 
@@ -410,5 +430,20 @@ const styles = StyleSheet.create({
     color: Colors.accent,
     textAlign: 'center',
     fontStyle: 'italic',
+  },
+  webMapPlaceholder: {
+    backgroundColor: Colors.lightGrey,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  webMapText: {
+    ...Typography.h3,
+    color: Colors.primary,
+    marginTop: 16,
+  },
+  webMapSubtext: {
+    ...Typography.bodySmall,
+    color: Colors.textSecondary,
+    marginTop: 8,
   },
 });
