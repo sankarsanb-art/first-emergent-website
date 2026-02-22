@@ -483,4 +483,23 @@ const styles = StyleSheet.create({
     marginBottom: 32,
     lineHeight: 24,
   },
+  offeringCategory: {
+    ...Typography.h4,
+    color: Colors.primary,
+    marginBottom: 12,
+    marginTop: 8,
+  },
+  highlightBox: {
+    backgroundColor: Colors.accent,
+    padding: 16,
+    borderRadius: 8,
+    marginTop: 16,
+  },
+  highlightText: {
+    ...Typography.body,
+    color: Colors.primary,
+    fontWeight: '600',
+    textAlign: 'center',
+    lineHeight: 24,
+  },
 });
