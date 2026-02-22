@@ -128,6 +128,13 @@ export default function ContactPage() {
 
           {/* Contact Information */}
           <View style={styles.section}>
+            <View style={styles.profileSection}>
+              <Image
+                source={require('../assets/images/profile.jpg')}
+                style={styles.profileImage}
+                resizeMode="cover"
+              />
+            </View>
             <SectionHeader title="Get In Touch" align="center" />
             
             <View style={styles.contactInfoContainer}>
@@ -333,6 +340,17 @@ const styles = StyleSheet.create({
   },
   section: {
     padding: 24,
+  },
+  profileSection: {
+    alignItems: 'center',
+    marginBottom: 24,
+  },
+  profileImage: {
+    width: 150,
+    height: 150,
+    borderRadius: 75,
+    borderWidth: 4,
+    borderColor: Colors.accent,
   },
   contactInfoContainer: {
     marginTop: 16,
