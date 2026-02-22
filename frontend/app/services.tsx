@@ -154,6 +154,176 @@ export default function ServicesPage() {
               </Text>
             </View>
           </View>
+
+          {/* Service 4: ITSM Transformation */}
+          <ServiceCard
+            icon="construct"
+            title="Enterprise ITSM Transformation & ITIL-Based Service Excellence"
+            description="Design, implement, and optimize IT Service Management frameworks aligned with business strategy, governance mandates, and digital transformation objectives. Led by Peoplecert Ambassador & ITIL Master."
+            features={[
+              'ITIL & ITSM Training Programs (Foundation to Advanced)',
+              'ITSM Process Design & Implementation',
+              'AI-Enabled ITSM Advisory & Automation',
+              'ISO/IEC 20000 Certification Preparation',
+              'Service Desk Optimization & Maturity Assessment',
+            ]}
+          />
+
+          <View style={styles.serviceDetails}>
+            <Text style={styles.detailsTitle}>Key Offerings:</Text>
+            
+            <Text style={styles.offeringCategory}>1. ITIL & ITSM Training Programs</Text>
+            <View style={styles.detailItem}>
+              <Ionicons name="checkmark-circle" size={18} color={Colors.accent} />
+              <Text style={styles.detailText}>
+                ITIL Foundation (Exam & Practitioner-Oriented Tracks)
+              </Text>
+            </View>
+            <View style={styles.detailItem}>
+              <Ionicons name="checkmark-circle" size={18} color={Colors.accent} />
+              <Text style={styles.detailText}>
+                Role-Based ITSM Training (Incident, Problem, Change, Service Level, CMDB)
+              </Text>
+            </View>
+            <View style={styles.detailItem}>
+              <Ionicons name="checkmark-circle" size={18} color={Colors.accent} />
+              <Text style={styles.detailText}>
+                Advanced ITIL 4 Modules (MP / SL Guidance)
+              </Text>
+            </View>
+            <View style={styles.detailItem}>
+              <Ionicons name="checkmark-circle" size={18} color={Colors.accent} />
+              <Text style={styles.detailText}>
+                Executive Awareness Sessions on Governance & Service Strategy
+              </Text>
+            </View>
+            <View style={styles.detailItem}>
+              <Ionicons name="checkmark-circle" size={18} color={Colors.accent} />
+              <Text style={styles.detailText}>
+                ITSM Tool-Based Training (ServiceNow / ManageEngine / Others)
+              </Text>
+            </View>
+
+            <Text style={[styles.offeringCategory, { marginTop: 16 }]}>2. ITSM Process Design & Implementation</Text>
+            <View style={styles.detailItem}>
+              <Ionicons name="checkmark-circle" size={18} color={Colors.accent} />
+              <Text style={styles.detailText}>
+                Current State Assessment (Maturity & Gap Analysis)
+              </Text>
+            </View>
+            <View style={styles.detailItem}>
+              <Ionicons name="checkmark-circle" size={18} color={Colors.accent} />
+              <Text style={styles.detailText}>
+                Future-State Operating Model Design
+              </Text>
+            </View>
+            <View style={styles.detailItem}>
+              <Ionicons name="checkmark-circle" size={18} color={Colors.accent} />
+              <Text style={styles.detailText}>
+                SOP Development & RACI Matrix Creation
+              </Text>
+            </View>
+            <View style={styles.detailItem}>
+              <Ionicons name="checkmark-circle" size={18} color={Colors.accent} />
+              <Text style={styles.detailText}>
+                Governance Framework Alignment (COBIT, ISO 20000, ISO 27001)
+              </Text>
+            </View>
+            <View style={styles.detailItem}>
+              <Ionicons name="checkmark-circle" size={18} color={Colors.accent} />
+              <Text style={styles.detailText}>
+                KPI & Metrics Design (Operational + Governance-Level)
+              </Text>
+            </View>
+
+            <Text style={[styles.offeringCategory, { marginTop: 16 }]}>3. AI-Enabled ITSM Advisory</Text>
+            <View style={styles.detailItem}>
+              <Ionicons name="checkmark-circle" size={18} color={Colors.accent} />
+              <Text style={styles.detailText}>
+                Intelligent Ticket Classification Strategy
+              </Text>
+            </View>
+            <View style={styles.detailItem}>
+              <Ionicons name="checkmark-circle" size={18} color={Colors.accent} />
+              <Text style={styles.detailText}>
+                Predictive Incident & Problem Analysis
+              </Text>
+            </View>
+            <View style={styles.detailItem}>
+              <Ionicons name="checkmark-circle" size={18} color={Colors.accent} />
+              <Text style={styles.detailText}>
+                AI Impact Assessment in ITSM
+              </Text>
+            </View>
+            <View style={styles.detailItem}>
+              <Ionicons name="checkmark-circle" size={18} color={Colors.accent} />
+              <Text style={styles.detailText}>
+                Automation Feasibility Studies
+              </Text>
+            </View>
+            <View style={styles.detailItem}>
+              <Ionicons name="checkmark-circle" size={18} color={Colors.accent} />
+              <Text style={styles.detailText}>
+                Governance of AI in Service Operations
+              </Text>
+            </View>
+
+            <Text style={styles.detailsTitle}>What Clients Get:</Text>
+            <View style={styles.detailItem}>
+              <Ionicons name="star" size={18} color={Colors.accent} />
+              <Text style={styles.detailText}>
+                A structured ITSM roadmap aligned to business objectives
+              </Text>
+            </View>
+            <View style={styles.detailItem}>
+              <Ionicons name="star" size={18} color={Colors.accent} />
+              <Text style={styles.detailText}>
+                Clearly defined processes with measurable KPIs
+              </Text>
+            </View>
+            <View style={styles.detailItem}>
+              <Ionicons name="star" size={18} color={Colors.accent} />
+              <Text style={styles.detailText}>
+                Improved incident resolution time & service reliability
+              </Text>
+            </View>
+            <View style={styles.detailItem}>
+              <Ionicons name="star" size={18} color={Colors.accent} />
+              <Text style={styles.detailText}>
+                Increased ticket logging discipline & governance maturity
+              </Text>
+            </View>
+            <View style={styles.detailItem}>
+              <Ionicons name="star" size={18} color={Colors.accent} />
+              <Text style={styles.detailText}>
+                Reduced operational risk and audit exposure
+              </Text>
+            </View>
+            <View style={styles.detailItem}>
+              <Ionicons name="star" size={18} color={Colors.accent} />
+              <Text style={styles.detailText}>
+                Practical automation opportunities identified
+              </Text>
+            </View>
+            <View style={styles.detailItem}>
+              <Ionicons name="star" size={18} color={Colors.accent} />
+              <Text style={styles.detailText}>
+                Skilled and accountable service teams
+              </Text>
+            </View>
+            <View style={styles.detailItem}>
+              <Ionicons name="star" size={18} color={Colors.accent} />
+              <Text style={styles.detailText}>
+                Sustainable continual improvement model
+              </Text>
+            </View>
+            
+            <View style={styles.highlightBox}>
+              <Text style={styles.highlightText}>
+                Most importantly: A shift from reactive IT support to governed, value-driven service management.
+              </Text>
+            </View>
+          </View>
         </View>
 
         {/* Why Choose Section */}
