@@ -6,6 +6,7 @@ import { Button } from '../components/Button';
 import { ServiceCard } from '../components/ServiceCard';
 import { SectionHeader } from '../components/SectionHeader';
 import { TestimonialCard } from '../components/TestimonialCard';
+import { Logo } from '../components/Logo';
 import { Colors } from '../constants/Colors';
 import { Typography } from '../constants/Typography';
 import { router } from 'expo-router';
@@ -24,6 +25,7 @@ export default function HomePage() {
       <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
         {/* Hero Section */}
         <View style={styles.hero}>
+          <Logo size="large" style={styles.heroLogo} />
           <Text style={styles.heroTitle}>
             Board-Level IT Governance & Digital Trust Leadership
           </Text>
@@ -215,6 +217,7 @@ export default function HomePage() {
 
         {/* Footer */}
         <View style={styles.footer}>
+          <Logo size="medium" style={styles.footerLogo} />
           <Text style={styles.footerName}>Sankarsan Biswas</Text>
           <Text style={styles.footerTitle}>
             Enterprise IT Governance & Digital Trust Leadership
@@ -241,6 +244,10 @@ const styles = StyleSheet.create({
     padding: 32,
     paddingTop: 48,
     paddingBottom: 48,
+    alignItems: 'center',
+  },
+  heroLogo: {
+    marginBottom: 24,
   },
   heroTitle: {
     ...Typography.h1,
@@ -338,6 +345,9 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.secondary,
     padding: 32,
     alignItems: 'center',
+  },
+  footerLogo: {
+    marginBottom: 16,
   },
   footerName: {
     ...Typography.h3,
