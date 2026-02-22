@@ -303,11 +303,12 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.3,
     shadowRadius: 8,
     elevation: 8,
+    width: 250,
+    height: 300,
   },
   executiveImage: {
-    width: 200,
-    height: 200,
-    borderRadius: 12,
+    width: 250,
+    height: 300,
   },
   executiveContent: {
     flex: 1,
