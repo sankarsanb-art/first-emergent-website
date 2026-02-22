@@ -1,6 +1,8 @@
 import { Tabs } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
+import { View } from 'react-native';
 import { Colors } from '../constants/Colors';
+import { Logo } from '../components/Logo';
 
 export default function Layout() {
   return (
@@ -27,6 +29,11 @@ export default function Layout() {
         headerTitleStyle: {
           fontWeight: '600',
         },
+        headerLeft: () => (
+          <View style={{ marginLeft: 16 }}>
+            <Logo size="small" />
+          </View>
+        ),
       }}
     >
       <Tabs.Screen
