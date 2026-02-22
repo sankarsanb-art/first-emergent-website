@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, ImageBackground, Linking } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Image, Linking } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { Button } from '../components/Button';
@@ -55,20 +55,31 @@ export default function HomePage() {
 
         {/* Executive Positioning */}
         <View style={styles.section}>
-          <SectionHeader
-            title="Governance That Drives Confidence, Not Just Compliance"
-            align="center"
-          />
-          <Text style={styles.bodyText}>
-            With 30+ years of enterprise IT and governance leadership, I specialize in designing and
-            implementing IT governance systems that integrate risk, performance, compliance, and
-            resilience into strategic decision-making frameworks.
-          </Text>
-          <Text style={[styles.bodyText, { marginTop: 16 }]}>
-            My experience spans regulated banking, telecom, aviation, and global IT services across
-            IBM, HCL, Standard Chartered, ANZ Grindlays, and regional operations in UK, EMEA, Middle
-            East, and GCC regions.
-          </Text>
+          <View style={styles.executiveSection}>
+            <View style={styles.executiveImageContainer}>
+              <Image
+                source={require('../assets/images/profile.jpg')}
+                style={styles.executiveImage}
+                resizeMode="cover"
+              />
+            </View>
+            <View style={styles.executiveContent}>
+              <SectionHeader
+                title="Governance That Drives Confidence, Not Just Compliance"
+                align="left"
+              />
+              <Text style={styles.bodyText}>
+                With 30+ years of enterprise IT and governance leadership, I specialize in designing and
+                implementing IT governance systems that integrate risk, performance, compliance, and
+                resilience into strategic decision-making frameworks.
+              </Text>
+              <Text style={[styles.bodyText, { marginTop: 16 }]}>
+                My experience spans regulated banking, telecom, aviation, and global IT services across
+                IBM, HCL, Standard Chartered, ANZ Grindlays, and regional operations in UK, EMEA, Middle
+                East, and GCC regions.
+              </Text>
+            </View>
+          </View>
         </View>
 
         {/* Credibility Strip */}
@@ -278,6 +289,28 @@ const styles = StyleSheet.create({
   },
   section: {
     padding: 24,
+  },
+  executiveSection: {
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  executiveImageContainer: {
+    marginBottom: 24,
+    borderRadius: 12,
+    overflow: 'hidden',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 8,
+  },
+  executiveImage: {
+    width: 200,
+    height: 200,
+    borderRadius: 12,
+  },
+  executiveContent: {
+    flex: 1,
   },
   bodyText: {
     ...Typography.body,
