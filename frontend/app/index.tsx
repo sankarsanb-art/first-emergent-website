@@ -145,6 +145,18 @@ export default function HomePage() {
             ]}
             onPress={handleViewServices}
           />
+
+          <ServiceCard
+            icon="construct"
+            title="Enterprise ITSM Transformation & ITIL-Based Service Excellence"
+            description="Transform IT operations into measurable service excellence with ITIL 4 frameworks"
+            features={[
+              'ITIL & ITSM Training Programs',
+              'ITSM Process Design & Implementation',
+              'AI-Enabled ITSM Advisory',
+            ]}
+            onPress={handleViewServices}
+          />
         </View>
 
         {/* Testimonials */}
