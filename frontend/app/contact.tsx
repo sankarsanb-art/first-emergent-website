@@ -128,7 +128,7 @@ export default function ContactPage() {
                 <Ionicons name="location" size={24} color={Colors.accent} />
                 <View style={styles.contactTextContainer}>
                   <Text style={styles.contactLabel}>Location</Text>
-                  <Text style={styles.contactValue}>Bengaluru, India</Text>
+                  <Text style={styles.contactValue}>Kolkata, India</Text>
                   <Text style={styles.contactNote}>Open to GCC Engagements</Text>
                 </View>
               </View>
@@ -266,7 +266,7 @@ export default function ContactPage() {
             <View style={styles.mapContainer}>
               <View style={[styles.map, styles.webMapPlaceholder]}>
                 <Ionicons name="location" size={48} color={Colors.accent} />
-                <Text style={styles.webMapText}>Bengaluru, India</Text>
+                <Text style={styles.webMapText}>Kolkata, India</Text>
                 <Text style={styles.webMapSubtext}>
                   Open in Maps App for directions
                 </Text>
